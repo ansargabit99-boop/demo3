@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* Layout */
+.header {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.nav-bg {
+  color: white;
+  padding: 1.5rem;
+}
+
+.blue {
+     background-color: #111827;
+}
+.log {
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+.navbar-menu {
+  padding: 0.9rem 1rem;
+  background-color: #1f2933;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;   /* KEEP THIS */
+  transition: background 0.3s, transform 0.2s;
+}
+
+.navbar-show {
+  display: block;
+}
+
+.navbar-menu:hover {
+  background-color: #374151;
+  transform: translateX(5px);
+}
+
+
+/* Main content */
+main {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Top profile bar */
+.profile {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Inputs */
+input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Buttons */
+.add {
+  background-color: #2563eb;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.add:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+.clear {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear:hover {
+  background-color: #f3f4f6;
+}
+
+/* Action area */
+.action {
+  margin-top: 2rem;
+  background-color: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+  min-height: 200px;
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav-bg {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+}
